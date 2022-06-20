@@ -6,7 +6,26 @@ module.exports = (sequelize) => {
   sequelize.define('recipe', {
     name: {
       type: DataTypes.STRING,
+      defaultValue: DataTypes.UUUIDV4,
+      allowNull: false,
+      primaryKey: true
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull : false,
+    },
+    summary: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
+    score: {
+      type: DataTypes.INTEGER
+    },
+    healthScore:{
+      type: DataTypes.INTEGER
+    },
+    steps:{
+      type: DataTypes.STRING
+    }
   });
 };
