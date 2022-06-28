@@ -1,6 +1,7 @@
 const {Router} = require('express');
-const {Diet} = require('../db');
+const {TypeDiet} = require('../db');
 const router = Router();
+const {diets} = require('../controllers/diets')
 
 router.get('/', async (req,res) => {
     //console.log(diets);
